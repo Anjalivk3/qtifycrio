@@ -1,5 +1,5 @@
-import Navbar from './Navbar/Navbar';
-import Hero from './Hero/Hero';
+import Navbar from './src/Navbar/Navbar';
+import Hero from './src/Hero/Hero';
 import logo from './logo.svg';
 import './App.css';
 
@@ -13,7 +13,7 @@ function App() {
         </p>
         <Navbar />
         <Hero />
-        <Search/>
+        <Search />
       </header>
     </div>
   );
