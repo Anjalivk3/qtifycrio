@@ -1,3 +1,5 @@
+import Navbar from './Navbar/Navbar';
+import Hero from './Hero/Hero';
 import logo from './logo.svg';
 import './App.css';
 
@@ -9,8 +11,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <Navbar/>
-        <Hero/>
+        <Navbar />
+        <Hero />
         <Search/>
       </header>
     </div>
