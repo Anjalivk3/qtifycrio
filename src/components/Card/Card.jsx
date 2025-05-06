@@ -3,7 +3,7 @@ import styles from "./Card.module.css";
 import { Chip, Tooltip } from "@mui/material";
 
 function Card(data, type){
-  console.log("card file data", data);
+  //console.log("card file data", data);
   console.log("card file type", type);
   switch(type){
     case "album":{

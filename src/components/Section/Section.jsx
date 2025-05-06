@@ -4,9 +4,9 @@ import Card from '../Card/Card';
 import {CircularProgress} from '@mui/material';
 import Carousel from '../Carousel/Carousel';
 
-
  const Section = ({secType, secTitle, secData, toggle=true})=>{
     //console.log("section file secData", secData);
+    console.log("section file secType", secType);
     const [carouselToggle, setCarouselToggle] = useState(true);
     const handleToggle = ()=>{
       setCarouselToggle(!carouselToggle);

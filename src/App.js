@@ -7,12 +7,9 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import { fetchTopAlbums } from './api/api';
 
-
-
-
 function App() {
     const [topAlbum, setTopAlbum] = useState([]);
-    const [newAlbum, setNewAlbum] = useState([]);
+    // const [newAlbum, setNewAlbum] = useState([]);
     const generateTopAlbums = async()=>{
       try {
         const res = await fetchTopAlbums();
@@ -25,7 +22,7 @@ function App() {
 
     useEffect(()=>{
       generateTopAlbums();
-    }, [])
+    }, []);
 
   return (
 

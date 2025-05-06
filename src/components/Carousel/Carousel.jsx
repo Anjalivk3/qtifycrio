@@ -11,7 +11,7 @@ const CarouselControls = ({data})=>{
   let swiper = useSwiper();
   //console.log("carousel file CarouselControls", data);
   useEffect(()=>{
-      swiper.slideTo(0,1);
+      swiper.slideTo(0);
   }, [data]);
 
   return <></>
@@ -21,7 +21,7 @@ const Carousel = ({data, cardComponent}) =>{
 
   return (
     <div className={styles.wrapper}>
-      <swiper initialSlide={0} spaceBetween={40} slidesPerView={"auto"} modules={[Navigation]} allowTouchMove>
+      <Swiper initialSlide={0} spaceBetween={40} slidesPerView={"auto"} modules={[Navigation]} allowTouchMove>
     <CarouselControls data={data}/>
       <CarouselLeft/>
       <CarouselRight/>
@@ -32,7 +32,7 @@ const Carousel = ({data, cardComponent}) =>{
       ))}
 
     
-      </swiper>
+      </Swiper>
     </div>
   )
 
