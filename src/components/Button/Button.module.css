@@ -9,4 +9,6 @@
   border: 1px solid var(--color-primary);
   font-weight: 600;
   font-size: 18px;  
+  font-family: 'poppins', sans-serif;
+  letter-spacing: 0.25px;
 }
