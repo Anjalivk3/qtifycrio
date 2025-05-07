@@ -29,9 +29,7 @@ const Carousel = ({data, cardComponent}) =>{
         <SwiperSlide key={indx}>
           {cardComponent(item)}
         </SwiperSlide>
-      ))}
-
-    
+      ))}    
       </Swiper>
     </div>
   )
