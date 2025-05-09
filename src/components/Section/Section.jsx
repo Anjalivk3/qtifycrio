@@ -3,17 +3,16 @@ import { CircularProgress } from '@mui/material';
 import Card from "../Card/Card";
 import styles from "./Section.module.css"
 import Carousel from '../Carousel/Carousel';
-
+import SongTabs from '../Tabs/Tabs'
 // eg of data recieved is:
 // type='album' title='Top Albums' data={topAlbumSongs}
 // here, topAlbumSongs is just an array of 16-17 albums with some info and an array of songs in that album
 
-const Section=({type,title,data,toggle=true})=> {
+const Section=({type, title, data, value=0, handleChange=null,toggle=true})=> {
 
 // if carouselToggle is true means render "collapsed" view (ie corousel of albums) and  on the button provide "show all" text
 // if carouselToggle is false means render "show all" view (ie All albums ) and  on the button provide "Collapse all" text
     const[carouselToggle,setCarouselToggle]=useState(true);
-
     const handleToggle=()=>{
         setCarouselToggle(!carouselToggle);
     }
@@ -57,7 +56,7 @@ const Section=({type,title,data,toggle=true})=> {
             <CircularProgress />
             </div>
         )}
-
+    {type==="song"?(<SongTabs data={data} value={value} handleChange={handleChange}/>):null}
     </div>
   )
 }

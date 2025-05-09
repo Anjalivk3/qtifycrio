@@ -28,7 +28,17 @@ export const fetchTopAlbums = async()=>{
 
      
 
-
+  export const fetchSongs=async()=>{
+    try{
+        const songsres=await axios.get(`${backend_Endpoint}/songs`);
+        console.log(songsres.data);
+        return songsres.data;
+    }
+    catch(error){
+      console.log("some error in fetchSongs", error);
+        return null;
+    }
+}
 
 
   

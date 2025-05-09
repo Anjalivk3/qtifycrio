@@ -11,7 +11,7 @@ const CarouselControls = ({data})=>{
   let swiper = useSwiper();
   //console.log("carousel file CarouselControls", data);
   useEffect(()=>{
-      swiper.slideTo(0, null);
+      swiper.slideTo(0);
   }, [data]);
 
   return <></>
