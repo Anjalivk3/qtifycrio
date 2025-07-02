@@ -44,10 +44,11 @@ const Section=({type, title, data, value=0, handleChange=null,toggle=true})=> {
                 ))}
                 </div>
             ):(
-              <div>
+            //  <div>hello</div>
+            <div>
               {/* show carousel here */}
               <Carousel data={data} cardComponent={(data)=><Card data={data} type={type}/>}/>
-              </div>  
+              </div>
             )}
             </div>
         ):(
