@@ -6,13 +6,9 @@ function Card({ data, type }) {
   switch (type) {
     case "album": {
       const { image, follows, title, songs } = data;
-      // console.log("card file image", image);
-      // console.log("card file follows", follows);
-      // console.log("card file title", title);
-      // console.log("card file songs", songs);
       return (
         // "?." operator will give null if the value before ?. is undefined
-        <Tooltip title={`${songs.length} songs`} placement="top" arrow>
+        <Tooltip title={`${songs?.length} songs`} placement="top" arrow>
           <div className={styles.wrapper}>
             <div className={styles.card}>
               <img src={image} alt="album" />

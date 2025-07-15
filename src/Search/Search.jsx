@@ -1,30 +1,19 @@
 import React from "react";
+// The imported PNG file is treated as a React component, and you can use it just like any other React component in your application.
+import {ReactComponent as SearchIcon} from  "../assets/search-icon.svg"
 import styles from "./Search.module.css";
-import { ReactComponent as SearchIcon } from "../assets/search-icon.svg";
 
+const Search = ({search}) => {
 
-function Search({ searchData, placeholder }) {
-  
-
-  return (
-    <div style={{ position: "relative" }}>
-      <form
-        className={styles.wrapper}       
-      >       
-          <input
-            name="album"
-            className={styles.search}
-            placeholder={placeholder}
-            required           
-          />        
-        <div>
-          <button className={styles.searchButton} type="submit">
-            <SearchIcon />
-          </button>
-        </div>
-      </form>      
-    </div>
-  );
+    return (
+        <form className={styles.wrapper}>
+            <input
+                className={styles.search}
+                placeholder={search}
+            />
+            <button className={styles.searchButton} type="submit"><SearchIcon /></button>
+        </form>
+    );
 }
 
 export default Search;

@@ -1,25 +1,27 @@
-import React, { useState, useEffect } from "react";
-import {ReactComponent as RightArrow} from '../../../assets/rightArrow.svg';
-import {useSwiper, Swiper, SwiperSlide} from 'swiper/react';
+import React, { useEffect, useState } from 'react';
+import {ReactComponent as RightArrow} from "../../../assets/rightArrow.svg";
+import { useSwiper, Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import styles from './CarouselRight.module.css';
-const CarouselRight = ()=>{
-    let swiper = useSwiper();
-    const[isEnd, setIsEnd]=useState(true);
+import styles from "./CarouselRight.module.css";
 
-    useEffect(()=>{
-      if(!swiper) return;
 
-      const handleSlideChange=()=>{
-        setIsEnd(swiper.isEnd);
-    };
-    swiper.on("slideChange", handleSlideChange);
-    handleSlideChange();
-    return ()=>{swiper.off("slideChange", handleSlideChange);};
-        
-    }, [swiper]);
+const CarouselRight = () => {
+  let swiper =useSwiper();
+  const[isEnd, setIsEnd]=useState(swiper.isEnd);
 
-    return (<div className={styles.rNavigation}>{!isEnd && <RightArrow onClick={()=>swiper.slideNext()}/>}</div>);
+  useEffect(()=>{
+    swiper.on("slideChange", () => {
+      // to set the state when ever we change the slide, to control conditional rendering of Right arrow button
+      setIsEnd(swiper.isEnd)
+  })
+  },[swiper]);
+
+  return (
+    <div className={styles.rightNavigation}>
+      {/* don't show Right arrow when we are on the Right most card */}
+      {!isEnd && <RightArrow onClick={()=>swiper.slideNext()}/>}
+    </div>
+  )
 }
 
 export default CarouselRight;
