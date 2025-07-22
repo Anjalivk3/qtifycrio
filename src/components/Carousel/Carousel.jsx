@@ -33,10 +33,9 @@ const Carousel = ({data,renderCardComponent}) => {
     <div className={styles.wrapper}>
     <Swiper
         initialSlide={0}
-        spaceBetween={10}
-        slidesPerView={"auto"}
-        
-        centeredSlides={"true"}
+        spaceBetween={20}
+        slidesPerView={4}        
+        centeredSlides={"false"}
          // The Pagination module from Swiper.js is explicitly imported and passed to the modules prop of the Swiper component.
          modules={[Navigation]}
          allowTouchMove
