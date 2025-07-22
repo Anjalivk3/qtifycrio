@@ -20,8 +20,4 @@ export default Search;
 
 
 
-    return (
-        
-    );
-
 
