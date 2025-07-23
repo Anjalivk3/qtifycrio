@@ -1,7 +1,7 @@
 .wrapper{
     position: relative;
 }
-.swiper-slide{
+.halfSwiper .swiper-slide{
     width: 50%;
     
 }
