@@ -31,14 +31,15 @@ const Carousel = ({data,renderCardComponent}) => {
   return (
 
     <div className={styles.wrapper}>
+      
     <Swiper
         initialSlide={0}
         spaceBetween={20}
-        slidesPerView={5}        
+        slidesPerView={8}        
         centeredSlides={"false"}
          // The Pagination module from Swiper.js is explicitly imported and passed to the modules prop of the Swiper component.
          modules={[Navigation]}
-         className={styles.halfSwiper}
+        //  className={styles.halfSwiper}
          allowTouchMove         
         >
         <Controls data={data}/>
@@ -49,7 +50,8 @@ const Carousel = ({data,renderCardComponent}) => {
          // renderCardComponent is using the card component in it to show cards, see in section component
          
         <SwiperSlide key={index}>{renderCardComponent(item)}</SwiperSlide>        
-      ))}       
+      ))}     
+       
     </Swiper>
     </div>
   )
