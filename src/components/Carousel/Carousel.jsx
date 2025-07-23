@@ -34,9 +34,9 @@ const Carousel = ({data,renderCardComponent}) => {
       
     <Swiper
         initialSlide={0}
-        spaceBetween={20}
-        slidesPerView={8}        
-        centeredSlides={"false"}
+        spaceBetween={10}
+        slidesPerView={5}        
+        centeredSlides={false}
          // The Pagination module from Swiper.js is explicitly imported and passed to the modules prop of the Swiper component.
          modules={[Navigation]}
         //  className={styles.halfSwiper}
