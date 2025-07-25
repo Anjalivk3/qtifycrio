@@ -19,7 +19,7 @@ const Controls=({data})=>{
     
     useEffect(()=>{
         //swiper.slideTo(index, speed, runCallbacks(optional))
-        swiper.slideTo(0,1)
+        swiper.slideTo(0,null)
     },[data])
 
     return <>
