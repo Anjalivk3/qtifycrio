@@ -3,6 +3,7 @@ import styles from "./Card.module.css";
 import { Chip, Tooltip } from "@mui/material";
 
 function Card({ data, type }) {
+  console.log("music data in card component");
   switch (type) {
     case "album": {
       const { image, follows, title, songs } = data;

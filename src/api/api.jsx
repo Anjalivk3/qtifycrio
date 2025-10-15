@@ -1,10 +1,12 @@
 import axios from "axios";
-export const backend_Endpoint = "https://qtify-backend-labs.crio.do";
+export const backend_Endpoint = "https://qtify-backend.labs.crio.do";
 
-export const fetchTopAlbums = async()=>{
+export const fetchTopAlbums = async()=>{  
+  console.log("in fetchTopAlbums...  " + `${backend_Endpoint}/albums/top`);
       try {
         const resAlbum = await axios.get(`${backend_Endpoint}/albums/top`);
-        //console.log("api file fetchtopalbum",resAlbum.data);
+        
+        console.log("api file fetchtopalbum",resAlbum.data);
         return resAlbum.data;
       } catch (error) {
         console.log("some error in fetchTopAlbums", error);
@@ -16,7 +18,7 @@ export const fetchTopAlbums = async()=>{
     export const fetchNewAlbums=async()=>{
       try{
           const newres= await axios.get(`${backend_Endpoint}/albums/new`);
-          console.log(newres.data);
+          console.log("api file fetchNewAlbums", newres.data);
           return newres.data;
       }
       catch(error){

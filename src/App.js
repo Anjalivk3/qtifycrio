@@ -28,6 +28,7 @@ function App() {
   const generateTopAlbumSongs=async()=>{
     try{
       const res= await fetchTopAlbums();
+      console.log("topalbum in generateTopAlbumSongs: " + res);
     setTopAlbumSongs(res);
     }
     catch(error){
@@ -110,10 +111,11 @@ const generateNewSongs=(index)=>{
   return (
     <div className="App">
       <Navbar />
-      <Hero />
+       <Hero />
+      
       <div className={styles.sectionWrapper}>
       <Section type='album' title='Top Albums' data={topAlbumSongs}/>
-      <Section type='album' title='New Albums' data={newAlbumSongs}/>
+       <Section type='album' title='New Albums' data={newAlbumSongs}/>
       <FilterSection  type='song' title='Songs' value={value} filteredData={filteredData} handleChangeIndex={handleChangeIndex}/>
       </div>
     </div>
